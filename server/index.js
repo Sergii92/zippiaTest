@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import express from 'express';
-import App from '../client/components/App';
+import App from '../src/containers/App';
 
 const app = express();
 const port = 3000;
