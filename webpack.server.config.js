@@ -6,22 +6,21 @@ const { merge } = require('webpack-merge');
 const sharedConfig = require('./webpack.shared.config.js');
 
 let config = {
-	target: 'node', // [A]
+	target: 'node',
 
-	entry: './server/index.js', // [B]
+	entry: './server/index.js',
 
 	output: {
-		// [C]
 		path: path.join(__dirname, './build/server'),
 		filename: 'bundle.js'
 	},
 
-	externals: [ webpackNodeExternals() ], // [D]
+	externals: [ webpackNodeExternals() ],
 
 	module: {
 		rules: [
 			{
-				test: /\.less$/, // [E]
+				test: /\.less$/,
 				use: [
 					{
 						loader: 'css-loader',

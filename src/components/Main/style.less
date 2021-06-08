@@ -1,0 +1,45 @@
+.main {
+	background-color: #ffffff;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+}
+
+.section {
+	padding: 30px 0px;
+	border-top: 1px solid rgba(0, 0, 0, .07);
+	border-bottom: 1px solid rgba(0, 0, 0, .07);
+}
+
+.button_block {
+	margin: 30px 0px;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+.card_block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+@media screen and (max-width: 424px) {
+	.button_block {
+		flex-direction: column;
+		width: auto;
+	}
+	form {
+		width: min-content;
+		margin: 0 auto;
+	}
+	input {
+		outline: none;
+		margin-bottom: 5px;
+		width: 200px;
+	}
+	button {
+		width: 200px;
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+}

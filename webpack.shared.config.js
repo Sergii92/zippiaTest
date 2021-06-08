@@ -1,13 +1,9 @@
 module.exports = {
-	mode:
-		process.env.NODE_ENV === 'production' // [A]
-			? 'production'
-			: 'development',
+	mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
 	module: {
 		rules: [
 			{
-				// [B]
 				test: /\.js?$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/
@@ -16,6 +12,6 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: [ '.js', '.less' ] // [C]
+		extensions: [ '.js', '.jsx', '.less', '.css' ]
 	}
 };

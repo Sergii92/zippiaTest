@@ -1,13 +1,13 @@
 import React from 'react';
-
-import style from './style';
+import { Provider } from 'react-redux';
+import { store } from '../core/store';
+import { MainPage } from '../pages/MainPage';
 
 const App = () => {
 	return (
-		<React.Fragment>
-			<div className={style.app}>Hello World</div>
-			<button onClick={(e) => alert('Hello You!')}>Say Hello Back!</button>
-		</React.Fragment>
+		<Provider store={store}>
+			<MainPage />
+		</Provider>
 	);
 };
 
