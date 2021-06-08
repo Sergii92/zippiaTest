@@ -7,11 +7,19 @@ module.exports = {
 				test: /\.js?$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/
+			},
+			{
+				test: /\.(png|jpe?g|gif)$/i,
+				use: [
+					{
+						loader: 'file-loader'
+					}
+				]
 			}
 		]
 	},
 
 	resolve: {
-		extensions: [ '.js', '.jsx', '.less', '.css' ]
+		extensions: [ '.js', '.less' ]
 	}
 };
