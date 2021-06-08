@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-app.get('/test/jobs', (req, res) => {
+app.get('/', (req, res) => {
 	const clientBundleScript = `<script src="http://localhost:8080/scripts/bundle.js"></script>`;
 	const clientBundleStyle = `<link rel="stylesheet" href="http://localhost:8080/styles/bundle.css">`;
 
